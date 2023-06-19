@@ -21,7 +21,7 @@ export default function History () {
           <Carousel className='carousel__img' indicators={false}>
             {history.map((timestamp) => (
               <Carousel.Item className={timestamp.title}>
-                <img src={timestamp.img}  />
+                <img src={timestamp.img} alt={timestamp.title} />
               </Carousel.Item>
             ))}
           </Carousel>        
