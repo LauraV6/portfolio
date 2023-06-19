@@ -20,7 +20,7 @@ export default function Work () {
                 <p>{project.story.substring(0, 160) + '...'}</p>
               </div>
             </div>
-            <a className='project__img' href={project.url} target='_blank'>
+            <a className='project__img' href={project.url} target='_blank' rel='noreferrer'>
               <img src={project.img} alt={project.title} />
             </a>
           </article>
