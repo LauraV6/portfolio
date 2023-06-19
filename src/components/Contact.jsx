@@ -22,7 +22,7 @@ const Contact = () => {
           </div>     
       </div>
       <div className='column-item__image'>
-      <img src={require('../../public/assets/workdesk.svg').default} alt='design' />
+      <img src='assets/workdesk.svg' alt='design' />
       </div>
     </div>   
   </section>
