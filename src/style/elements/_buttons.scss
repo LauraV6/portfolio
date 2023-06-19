@@ -1,0 +1,52 @@
+.cbtn {
+    width: max-content;
+    background: transparent;
+    text-decoration: none;
+    font-family: var(--font-bold);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+
+    &--br1 {
+        border: 1px solid var(--color-bright-1);
+        color: var(--color-bright-1);
+
+        &:hover, &:active {
+            background-color: var(--color-bright-1)!important;
+            color: var(--color-dark);
+            cursor: pointer;
+
+            a {
+                background-color: var(--color-bright-1);
+                color: var(--color-dark);
+            }
+        }
+
+        a {
+            color: var(--color-bright-1);
+        }
+    }
+
+    &--br2 {
+        border: 1px solid var(--color-bright-2);
+        color: var(--color-bright-2);
+
+        &:hover, &:active {
+            background-color: var(--color-bright-2)!important;
+            color: var(--color-dark);
+            cursor: pointer;
+
+            a {
+                background-color: var(--color-bright-2);
+                color: var(--color-dark);
+            }
+        }
+
+        a {
+            color: var(--color-bright-2);
+        }
+    }
+
+    i {
+        font-size: 1.2rem;
+    }
+}

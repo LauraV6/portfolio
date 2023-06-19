@@ -1,0 +1,19 @@
+#root {
+    .footer {
+        gap: 10px;
+        width: 100%;
+        background-color: var(--color-footer);
+        font-size: .8rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    
+        label {
+            font-family: var(--font-bold);
+            text-transform: uppercase;
+        }
+    
+        svg {
+            margin-left: .7rem;
+        }
+    }
+}

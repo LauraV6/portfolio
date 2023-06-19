@@ -1,0 +1,27 @@
+.work {
+    padding-top: 5rem;
+
+    @include breakpoint-up(md) {
+        padding: 10rem 0 0 0;
+    }
+
+    &__content {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(md) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__items {
+        display: grid;
+        gap: 2rem;
+
+        @include breakpoint-up(md) {
+            grid-template-columns: 45% 45%;
+            gap: 5rem 10%;
+        }
+    }
+}

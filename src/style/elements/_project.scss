@@ -1,0 +1,59 @@
+.project {
+    position: relative;
+    display: grid;
+
+    &__content {
+        position: absolute;
+        display: grid;
+        order: 2;
+        gap: 1rem;
+        width: 100%;
+        bottom: 0;
+
+        @include breakpoint-up(md) {
+            order: 0;
+            width: 70%;
+            right: 0;
+            top: 20%;
+            bottom: auto;
+        }
+
+        .tags {
+            text-align: right;
+            padding:  0 1rem;
+
+            @include breakpoint-up(md) {
+                padding: 0;
+            }
+        }
+
+        .description {
+            display: grid;
+            gap: 1rem;
+            background-color: var(--color-footer);
+            z-index: 2;
+            padding: 1rem;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 350px;
+        background-color: var(--color-light);
+
+        @include breakpoint-up(md) {
+            width: 80%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}

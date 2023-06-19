@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'subtitle';
+    src: url('/src/fonts/dinpro-bold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'logo';
+    src: url('/src/fonts/rockwell.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url('/src/fonts/metropolis-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('/src/fonts/metropolis-bold.otf') format('opentype');
+}
+
+:root {
+    --font-regular: 'regular';
+    --font-bold: 'bold';
+    --font-subtitle: 'subtitle';
+    --font-logo: 'logo';
+}

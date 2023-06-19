@@ -1,0 +1,154 @@
+.history__carousel {
+    display: flow-root;
+
+    .carousel {
+
+        &__age {
+            display: grid;
+            font-family: var(--font-bold);
+
+            @include breakpoint-up(md) {
+                width: 30%;
+                float: left;
+                align-content: center;
+                gap: 3.5rem;
+                margin-top: 75px;
+            }
+
+            span {
+                position: relative;
+                display: none;
+                color: hsl(0, 0%, 100%);
+                margin-bottom: .5rem;
+
+                @include breakpoint-up(md) {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    width: 115%;
+                    transition: transform .5s cubic-bezier(0.42, 0, 0.15, 1.4);
+                    transform: scale(.9);
+                    color: var(--color-light);
+                    margin: 0;
+                }
+            }
+        }
+
+        &__img {
+            position: relative;
+
+            @include breakpoint-up(md) {
+                width: 70%;
+                float: right;
+            }
+        }
+
+        &-control {
+
+            &-prev, &-next {
+                width: 40px;
+                height: 40px;
+                top: -20px;
+                background: var(--color-dark);
+                opacity: 1;
+
+                &::after {
+                    font-size: 1rem;
+                }
+
+                &:hover, &:active, &:focus {
+                    opacity: 1;
+
+                    @include breakpoint-up(md) {
+                        color: var(--color-dark);
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover, &:active {
+
+                    span {
+                        filter: invert(100%) sepia(8%) saturate(7084%) hue-rotate(185deg) brightness(96%) contrast(100%);
+                    }
+                }
+
+                span {
+                    background-size: 20px;
+                }
+            }
+
+            &-prev {
+                border: 1px solid var(--color-bright-1);
+                color: var(--color-bright-1);
+                left: auto;
+                right: 70px;
+
+                &:hover, &:active {
+                    background-color: var(--color-bright-1)!important;
+                }
+            }
+
+            &-next {
+                border: 1px solid var(--color-bright-2);
+                color: var(--color-bright-2);
+                right: 15px;
+
+                &:hover, &:active {
+                    background-color: var(--color-bright-2)!important;
+                }
+            }
+        }   
+    }
+
+    &:has(.baby.active ) {
+
+        .carousel__age {
+            span:first-of-type {
+                display: flex;
+                
+                @include breakpoint-up(md) {
+                    @include history-year;
+                }
+            }
+        }
+    }
+
+    &:has(.design.active ) {
+
+        .carousel__age {
+            span:nth-of-type(2) {
+                display: flex;
+
+                @include breakpoint-up(md) {
+                    @include history-year;
+                }
+            }
+        }
+    }  
+    
+    &:has(.cmd.active ) {
+
+        .carousel__age {
+            span:nth-of-type(3) {
+                display: flex;
+
+                @include breakpoint-up(md) {
+                    @include history-year;
+                }
+            }
+        }
+    }   
+
+    &:has(.job.active ) {
+
+        .carousel__age {
+            span:nth-of-type(4) {
+                display: flex;
+
+                @include breakpoint-up(md) {
+                    @include history-year;
+                }
+            }
+        }
+    }   
+}

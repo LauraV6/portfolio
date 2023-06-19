@@ -1,0 +1,16 @@
+h1, h2 {
+    font-family: var(--font-bold);
+}
+
+h1, h2, h3, .subtitle, p {
+    margin: 0!important
+}
+
+p {
+    font-family: var(--font-regular);
+    font-size: 1rem;
+}
+
+.notable {
+    color: hsl(0, 0%, 100%);
+}

@@ -1,0 +1,53 @@
+.header {
+    display: grid;
+    grid-gap: 20px;
+    padding: 5rem 0 4rem 0;
+  
+    @include breakpoint-up(md) {
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: minmax(auto, 55%) minmax(auto, 45%);
+      min-height: 100vh;
+      padding: 8rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+
+        @include breakpoint-up(md) {
+            font-size: 3rem;
+        }
+    }
+  
+    p {
+      line-height: 1.7rem;
+  
+      @include breakpoint-up(md) {
+        font-size: 1.1rem;
+      }
+    }
+  
+    &__content {
+      display: grid;
+      grid-gap: 15px;
+  
+      @include breakpoint-up(md) {
+        grid-gap: 25px;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(4, 184px);
+      gap: 2rem 67px;
+      top: -140px;
+      right: -150px;
+      width: 60%;
+      pointer-events: none;
+
+      @include breakpoint-up(md) {
+        z-index: 2000;
+      }
+    }
+  }
