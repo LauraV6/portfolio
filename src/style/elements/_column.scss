@@ -34,6 +34,24 @@
         .subtitle {
             color: var(--color-bright-2);
         }
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            span {
+                font-family: var(--font-dinpro);
+                opacity: .7;
+
+                &::before {
+                    content: '▹';
+                    color: var(--color-bright-2);
+                    margin-right: 5px;
+                }
+            }
+        }
     }
 
     &__image {

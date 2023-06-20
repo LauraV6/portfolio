@@ -7,7 +7,7 @@
             display: grid;
             font-family: var(--font-bold);
 
-            @include breakpoint-up(md) {
+            @include breakpoint-up(lg) {
                 width: 30%;
                 float: left;
                 align-content: center;
@@ -21,7 +21,7 @@
                 color: hsl(0, 0%, 100%);
                 margin-bottom: .5rem;
 
-                @include breakpoint-up(md) {
+                @include breakpoint-up(lg) {
                     display: flex;
                     align-items: center;
                     gap: 1rem;
@@ -36,10 +36,72 @@
 
         &__img {
             position: relative;
+            height: 300px;
+            background-size: contain;
+            background-position: top left;
+            background-repeat: no-repeat;
+            z-index: 1;
 
             @include breakpoint-up(md) {
+                height: 400px;
+            }
+
+            @include breakpoint-up(lg) {
+                height: 450px;
                 width: 70%;
                 float: right;
+            }
+
+            @include breakpoint-up(lg) {
+            }
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                display: inline-block;      
+                height: 100%;     
+            }
+
+            &::before {
+                width: 3.5%;
+                left: 0;
+                background: #304968;  
+                
+                @include breakpoint-up(lg) {
+                    width: 27px;
+                }
+            }
+
+            &::after {
+                width: 35%;
+                top: 0;
+                right: 0;
+                background: var(--color-middle-dark);
+                z-index: -1;
+            }
+
+            .carousel-inner {
+                height: 100%;
+            }
+
+            .carousel-item {
+                justify-content: space-between;
+                align-items: flex-start;
+                height: 100%;
+
+                p {
+                    width: 60%;
+                    padding-top: 33px;
+                    padding-left: 33px;
+                }
+
+                img {
+                    position: absolute;
+                    width: 45%;
+                    right: 5rem;
+                    bottom: 0;
+                    z-index: 10;
+                }
             }
         }
 
@@ -50,7 +112,9 @@
                 height: 40px;
                 top: -20px;
                 background: var(--color-dark);
+                transition: var(--transition);
                 opacity: 1;
+                z-index: 5;
 
                 &::after {
                     font-size: 1rem;
@@ -106,7 +170,7 @@
             span:first-of-type {
                 display: flex;
                 
-                @include breakpoint-up(md) {
+                @include breakpoint-up(lg) {
                     @include history-year;
                 }
             }
@@ -119,7 +183,7 @@
             span:nth-of-type(2) {
                 display: flex;
 
-                @include breakpoint-up(md) {
+                @include breakpoint-up(lg) {
                     @include history-year;
                 }
             }
@@ -132,7 +196,7 @@
             span:nth-of-type(3) {
                 display: flex;
 
-                @include breakpoint-up(md) {
+                @include breakpoint-up(lg) {
                     @include history-year;
                 }
             }
@@ -145,7 +209,7 @@
             span:nth-of-type(4) {
                 display: flex;
 
-                @include breakpoint-up(md) {
+                @include breakpoint-up(lg) {
                     @include history-year;
                 }
             }

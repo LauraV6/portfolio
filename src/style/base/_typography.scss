@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'subtitle';
+    font-family: 'dinpro';
     src: url('/src/fonts/dinpro-bold.otf') format('opentype');
     font-weight: 600;
 }
@@ -22,6 +22,6 @@
 :root {
     --font-regular: 'regular';
     --font-bold: 'bold';
-    --font-subtitle: 'subtitle';
+    --font-dinpro: 'dinpro';
     --font-logo: 'logo';
 }

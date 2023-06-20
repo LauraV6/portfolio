@@ -1,6 +1,12 @@
 {
   "name": "react-port-web",
+  "description": "Laura Vlasma Portfolio",
   "version": "0.1.0",
+  "author": "Brittany Chiang <brittany.chiang@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bchiang7/v4"
+  },
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",

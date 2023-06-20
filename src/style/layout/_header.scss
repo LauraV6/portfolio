@@ -47,7 +47,7 @@
       pointer-events: none;
 
       @include breakpoint-up(md) {
-        z-index: 2000;
+        z-index: 1000;
       }
     }
   }

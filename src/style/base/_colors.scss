@@ -1,7 +1,11 @@
 :root {
-    --color-dark: hsla(216, 65%, 11%);
-    --color-bright-1: hsla(40, 100%, 62%);
-    --color-bright-2: hsla(166, 100%, 70%);
-    --color-light: hsla(226, 70%, 88%);
-    --color-footer: hsla(215, 42%, 18%);
+    --color-dark: hsl(216, 65%, 11%);
+    --color-dark-transparent: hsla(216, 65%, 11%, .85);
+    --color-middle-dark: hsl(215, 37%, 24%);
+    --color-light: hsl(226, 70%, 88%);
+    --color-lightest: hsl(227, 70%, 92%);
+    --color-bright-1: hsl(40, 100%, 62%);
+    --color-bright-2: hsl(166, 100%, 70%);
+
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

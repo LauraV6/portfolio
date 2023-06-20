@@ -1,4 +1,5 @@
 import React from 'react'
+import background from '../images/readme-bg.png'
 import Carousel from 'react-bootstrap/Carousel'
 import { history } from '../data';
 
@@ -18,10 +19,11 @@ export default function History () {
             <span>2020</span>
             <span>2023</span>
           </div>
-          <Carousel className='carousel__img' indicators={false}>
+          <Carousel className='carousel__img' indicators={false} style={{backgroundImage: `url(${background})`}}>
             {history.map((timestamp) => (
               <Carousel.Item className={timestamp.title}>
-                <img src={timestamp.img} alt={timestamp.title} />
+                <p>{timestamp.text}</p>
+                <img className='img' src={timestamp.img} alt={timestamp.title} />
               </Carousel.Item>
             ))}
           </Carousel>        
@@ -30,4 +32,3 @@ export default function History () {
     </section>
   )
 }
-

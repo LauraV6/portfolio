@@ -12,7 +12,7 @@ const Header = () => {
       <div className='header__content'>
           <h3 className='subtitle subtitle--odd'>01. Laura Vlasma</h3>
           <h1>All-round (multimedia) <span className='notable'>Designer</span> and <span className='notable'>Front-end Developer</span></h1>
-          <p>My name is Laura, a Dutch UX designer / Front-end Developer who lives in Overijssel. My career started right after graduation in 2020, when I was 22 years old.</p>
+          <p>I’m a Frontend Developer specializing in designing and building exceptional digital experiences. Currently, I’m focused on building accessible, human-centered applications at <a className='hyperlink' href='https://www.awisoftware.nl' target='_blank' rel='noreferrer'>AWI Software.</a></p>
           <a href='#work' className='cbtn cbtn--br1'>Recent work</a>
       </div>
       <div className='header__image'>

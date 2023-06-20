@@ -1,6 +1,10 @@
 .intro {
     display: grid;
     gap: 3rem;
+
+    @include breakpoint-up(md) {
+        gap: 5rem;
+    }
 }
 
 .history {

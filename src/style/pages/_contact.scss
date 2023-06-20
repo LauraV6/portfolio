@@ -3,10 +3,11 @@
 
     @include breakpoint-up(md) {
         display: grid;
+        min-height: 50vh;
         padding: 6rem 0;
     }
 
-    @include breakpoint-up(lg) {
+    @include breakpoint-up(xlg) {
         min-height: calc(100vh - 4rem);
     }
 

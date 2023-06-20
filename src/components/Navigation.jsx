@@ -11,31 +11,23 @@ const Navigation = () => {
   const closeMenu = () => setClick(false)
 
   return (
-    <nav className='navi container'>
-
-      <div className='navi__group'>
-        <Link to='home' className='logo'>L.</Link>
-        <div className='hamburger' onClick={handleClick}>
-            {click ? (<FontAwesomeIcon icon={faXmark} />)
-                : (<FontAwesomeIcon icon={faBars} />)}
-
+    <nav className='navi'>
+      <div className='container'>
+        <div className='navi__group'>
+          <Link to='home' className='logo'>L.</Link>
+          <div className='hamburger' onClick={handleClick}>
+              {click ? (<FontAwesomeIcon icon={faXmark} />)
+                  : (<FontAwesomeIcon icon={faBars} />)}
+          </div>
         </div>
-      </div>
-      <div className='navi__group'>
-        <ul className={click ? "navi__links active" : "navi__links"}>
-              <li className='navi-item'>
-                  <Link to='home' spy={true} onClick={closeMenu}><span className='navi--br1'>01.</span> home</Link>
-              </li>
-              <li className='navi-item'>
-                  <Link to='work' spy={true} onClick={closeMenu}><span className='navi--br1'>02.</span> projects</Link>
-              </li>
-              <li className='navi-item'>
-                  <Link to='about' spy={true} onClick={closeMenu}><span className='navi--br1'>03.</span> about</Link>
-              </li>
-              <li className='navi-item'>
-                  <Link to='contact' spy={true} onClick={closeMenu}><span className='navi--br1'>04.</span> contact</Link>
-              </li>
+        <div className='navi__group'>
+          <ul className={click ? "navi__links active" : "navi__links"}>
+            <Link to='home' onClick={closeMenu}>home</Link>
+            <Link to='work' onClick={closeMenu}>projects</Link>
+            <Link to='about' onClick={closeMenu}>about</Link>
+            <Link to='contact' onClick={closeMenu}>contact</Link>
           </ul>
+        </div>
       </div>
     </nav>
   )

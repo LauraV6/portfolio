@@ -1,52 +1,108 @@
 .project {
     position: relative;
     display: grid;
+    align-items: center;
+
+    @include breakpoint-up(md) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    @media screen and (max-width: 991px) and (min-width: 768px) {        
+        &:nth-child(even) {
+
+            .project {
+                &__content {
+                    grid-area: -1 / 1 / -1 / 9;
+                }
+                &__img {
+                    grid-column: 4 / 14;
+                }
+            }
+        }
+    }
+
+    &:has(a:hover) {
+        img {
+            transform: scale(1.1);
+        }
+        h3, svg {
+            color: var(--color-bright-2);
+        }
+    }
 
     &__content {
-        position: absolute;
-        display: grid;
-        order: 2;
-        gap: 1rem;
-        width: 100%;
-        bottom: 0;
+        position: relative;
+        z-index: 1;
 
         @include breakpoint-up(md) {
-            order: 0;
-            width: 70%;
-            right: 0;
-            top: 20%;
-            bottom: auto;
-        }
-
-        .tags {
-            text-align: right;
-            padding:  0 1rem;
-
-            @include breakpoint-up(md) {
-                padding: 0;
-            }
+            grid-area: 1 / 5 / -1 / -1;
         }
 
         .description {
             display: grid;
             gap: 1rem;
-            background-color: var(--color-footer);
+            background-color: var(--color-middle-dark);
+            border-radius: 0 0 5px 5px;
+            padding: 1.5rem;
             z-index: 2;
-            padding: 1rem;
 
-            p {
-                margin: 0;
+            @include breakpoint-up(md) {
+                border-radius: 5px;
+            }
+
+            &__header {
+
+                > a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    text-decoration: none;
+                    color: var(--color-light);
+                    line-height: 1;
+                }
+
+                h3 {
+                    font-family: var(--font-bold);
+    
+                    a {
+                        text-decoration: none;
+                        color: var(--color-light);
+                    }
+                }
+
+                svg {
+                    color: white;
+                }
+            }
+        }
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            span {
+                font-family: var(--font-dinpro);
+                opacity: .7;
             }
         }
     }
 
     &__img {
+        position: relative;
+        grid-area: 1 / 1;
         width: 100%;
-        height: 350px;
+        height: 280px;
         background-color: var(--color-light);
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 15px 20px 60px -10px hsl(240, 87%, 6%);
 
         @include breakpoint-up(md) {
-            width: 80%;
+            grid-column: 1 / 10;
+            border-radius: 5px;
+            height: 350px;
         }
 
         img {
@@ -54,6 +110,12 @@
             height: 100%;
             object-fit: cover;
             object-position: top;
+            transition: transform .2s;
+            border-radius: 5px 5px 0 0;
+
+            @include breakpoint-up(md) {
+                border-radius: 5px;
+            }
         }
     }
 }
