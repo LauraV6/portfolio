@@ -13,7 +13,7 @@ const Contact = () => {
           <h2>Job for me</h2>
           <p>Send me a message on LinkedIn or through email to get in touch! I am always open to chat about building fun projects.</p>
           <div className='d-flex gap-3 mt-3'>
-            <a className='cbtn cbtn--br2' href='https://www.linkedin.com/in/laura-vlasma-0692b0159/' target='_blank' rel='noreferrer'>
+            <a className='cbtn cbtn--br2' href='https://www.linkedin.com/in/laura-vlasma-0692b0159/' target='_blank' rel="noreferrer">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
             <a className='cbtn cbtn--br1' href='mailto:lauravlasma1@gmail.com'>

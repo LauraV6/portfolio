@@ -22,10 +22,10 @@ const Navigation = () => {
         </div>
         <div className='navi__group'>
           <ul className={click ? "navi__links active" : "navi__links"}>
-            <Link to='home' onClick={closeMenu}>home</Link>
-            <Link to='work' onClick={closeMenu}>projects</Link>
-            <Link to='about' onClick={closeMenu}>about</Link>
-            <Link to='contact' onClick={closeMenu}>contact</Link>
+            <Link to='home' onClick={closeMenu} tabindex="1">home</Link>
+            <Link to='work' onClick={closeMenu} tabindex="1">projects</Link>
+            <Link to='about' onClick={closeMenu} tabindex="1">about</Link>
+            <Link to='contact' onClick={closeMenu} tabindex="1">contact</Link>
           </ul>
         </div>
       </div>

@@ -188,9 +188,17 @@
 .history__carousel .carousel__img .carousel-item img {
   position: absolute;
   width: 45%;
-  right: 5rem;
+  right: 2rem;
   bottom: 0;
   z-index: 10;
+}
+@media (min-width: 768px) {
+  .history__carousel .carousel__img .carousel-item img {
+    right: 5rem;
+  }
+}
+.history__carousel .carousel__img .carousel-item.design img {
+  bottom: 1rem;
 }
 .history__carousel .carousel-control-prev, .history__carousel .carousel-control-next {
   width: 40px;
@@ -691,7 +699,7 @@ h1, h2, h3 {
   background-color: var(--color-dark-transparent);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 0;
   z-index: 1500;
 }
 @media (max-width: 991px) {
@@ -807,6 +815,7 @@ h1, h2, h3 {
   cursor: pointer;
 }
 .navi .hamburger {
+  font-size: 1.5em;
   padding: 1rem;
 }
 @media (min-width: 768px) {

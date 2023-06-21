@@ -98,9 +98,19 @@
                 img {
                     position: absolute;
                     width: 45%;
-                    right: 5rem;
+                    right: 2rem;
                     bottom: 0;
                     z-index: 10;
+
+                    @include breakpoint-up(md) {
+                        right: 5rem;
+                    }
+                }
+
+                &.design {
+                    img {
+                        bottom: 1rem;
+                    }
                 }
             }
         }
