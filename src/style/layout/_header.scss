@@ -1,13 +1,13 @@
 .header {
     display: grid;
-    grid-gap: 20px;
+    align-items: center;
+    min-height: 100vh;
     padding: 5rem 0 4rem 0;
   
     @include breakpoint-up(md) {
       align-items: center;
       justify-content: center;
       grid-template-columns: minmax(auto, 55%) minmax(auto, 45%);
-      min-height: 100vh;
       padding: 8rem 0;
     }
 
@@ -29,10 +29,14 @@
   
     &__content {
       display: grid;
-      grid-gap: 15px;
+      grid-gap: 20px;
   
       @include breakpoint-up(md) {
         grid-gap: 25px;
+      }
+
+      a.cbtn {
+        margin-top: 1.7rem;
       }
     }
 

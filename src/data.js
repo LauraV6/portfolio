@@ -110,8 +110,13 @@ export const history = [
         title: 'design'
     },
     {
-        img: 'assets/readme-diploma.png',
+        img: 'assets/readme-hbo-diploma.png',
         text: 'This is an example of text that is gonna show up on the README file. Work in progress.',
         title: 'cmd'
+    },
+    {
+        img: 'assets/readme-work.png',
+        text: 'This is an example of text that is gonna show up on the README file. Work in progress.',
+        title: 'job'
     }
 ]
