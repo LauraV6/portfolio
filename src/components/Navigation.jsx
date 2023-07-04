@@ -1,27 +1,25 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { faXmark } from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-scroll'
 
 const Navigation = () => {
 
-  const [click, setClick] = useState(false)
-  const handleClick = () => setClick(!click)
-  const closeMenu = () => setClick(false)
+  const [navOpen, setNavOpen] = useState(false)
+  const closeMenu = () => setNavOpen(false)
 
   return (
     <nav className='navi'>
       <div className='container'>
         <div className='navi__group'>
           <Link to='home' className='logo'>L.</Link>
-          <div className='hamburger' onClick={handleClick}>
-              {click ? (<FontAwesomeIcon icon={faXmark} />)
-                  : (<FontAwesomeIcon icon={faBars} />)}
+          <div className='menu-toggle' onClick={() => setNavOpen(!navOpen)}>
+            <div className={navOpen ? "hamb hamb--open" : "hamb"}>
+              <span className={navOpen ? "line line--top spin" : "line line--top"}></span>
+              <span className={navOpen ? "line line--bottom spin" : "line line--bottom"}></span>
+            </div>
           </div>
         </div>
         <div className='navi__group'>
-          <ul className={click ? "navi__links active" : "navi__links"}>
+          <ul className={navOpen ? "navi__links active" : "navi__links"}>
             <Link to='home' onClick={closeMenu} tabindex="1">home</Link>
             <Link to='work' onClick={closeMenu} tabindex="1">projects</Link>
             <Link to='about' onClick={closeMenu} tabindex="1">about</Link>

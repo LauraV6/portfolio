@@ -56,6 +56,64 @@
                 color: var(--color-bright-2);
             }
         }
+
+        .menu-toggle {
+            cursor: pointer;
+
+            .hamb {
+                position: relative;
+                width: 44px;
+                height: 44px;
+                cursor: pointer;
+                border-radius: 50%;
+                transition: .3s ease;
+                padding: 1rem;
+
+                &:hover {
+                    background-color: var(--color-middle-dark);
+                }
+
+                .line {
+                    position: absolute;
+                    display: block;
+                    width: 22px;
+                    height: 2px;
+                    border-radius: 10px;
+                    background-color: var(--color-bright-2);
+                    left: 0;
+                    right: 0;
+                    transform: rotate(360deg);
+                    transition: all .4s;
+                    margin: 0 auto;
+
+                    &--top {
+                        top: 25px;
+
+                        &.spin {
+                            top: 21px;
+                            transform: rotate(135deg);
+                        }
+                    }
+
+                    &--bottom {
+                        bottom: 25px;
+
+                        &.spin {
+                            bottom: 21px;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    &.spin {
+                        background-color: hsl(0, 0%, 100%);
+                    }
+                }
+            }
+
+            @include breakpoint-up(md) {
+                display: none;
+            }
+        }
     }
 
     &__links {
@@ -110,15 +168,6 @@
         }
     }
 
-    .hamburger {
-        font-size: 1.5em;
-        padding: 1rem;
-
-        @include breakpoint-up(md) {
-            display: none;
-        }
-    }
-
     &:has(>div>ul.navi__links.active) {
         @include breakpoint-down(sm) {
             overflow-y: scroll;
@@ -126,4 +175,3 @@
         }
     }
 }
-

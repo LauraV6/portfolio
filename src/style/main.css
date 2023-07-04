@@ -712,6 +712,61 @@ h1, h2, h3 {
 .navi__group .logo:hover, .navi__group .logo:active {
   color: var(--color-bright-2);
 }
+.navi__group .menu-toggle {
+  cursor: pointer;
+}
+.navi__group .menu-toggle .hamb {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  padding: 1rem;
+}
+.navi__group .menu-toggle .hamb:hover {
+  background-color: var(--color-middle-dark);
+}
+.navi__group .menu-toggle .hamb .line {
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--color-bright-2);
+  left: 0;
+  right: 0;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin: 0 auto;
+}
+.navi__group .menu-toggle .hamb .line--top {
+  top: 25px;
+}
+.navi__group .menu-toggle .hamb .line--top.spin {
+  top: 21px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.navi__group .menu-toggle .hamb .line--bottom {
+  bottom: 25px;
+}
+.navi__group .menu-toggle .hamb .line--bottom.spin {
+  bottom: 21px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.navi__group .menu-toggle .hamb .line.spin {
+  background-color: hsl(0deg, 0%, 100%);
+}
+@media (min-width: 768px) {
+  .navi__group .menu-toggle {
+    display: none;
+  }
+}
 .navi__links {
   position: relative;
   display: none;
@@ -764,15 +819,6 @@ h1, h2, h3 {
 .navi__links a:hover, .navi__links a:active, .navi__links a:focus {
   color: var(--color-bright-2) !important;
   cursor: pointer;
-}
-.navi .hamburger {
-  font-size: 1.5em;
-  padding: 1rem;
-}
-@media (min-width: 768px) {
-  .navi .hamburger {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
   .navi:has(> div > ul.navi__links.active) {
