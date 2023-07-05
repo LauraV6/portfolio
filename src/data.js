@@ -101,22 +101,22 @@ export const projects = [
 export const history = [
     {
         img: 'assets/readme-birth.png',
-        text: 'This is an example of text that is gonna show up on the README file. Work in progress.',
+        text: 'On a hot summer night in Friesland, the Netherlands a baby named Laura was born, me! As as I grew older, I developed an interest in online creating. My knowledge about design grew and I have signed myself in for an Art & Design education.',
         title: 'baby'
     },
     {
         img: 'assets/readme-diploma.png',
-        text: 'This is an example of text that is gonna show up on the README file. Work in progress.',
+        text: 'In three years time I was handed my diploma and recieved the title of Media Designer. My design portfolio grew but I wanted to learn more about the web. So I have signed myself in for another education, named Communication and Multimedia Design.',
         title: 'design'
     },
     {
         img: 'assets/readme-hbo-diploma.png',
-        text: 'This is an example of text that is gonna show up on the README file. Work in progress.',
+        text: 'The last year of this education ended hectic. Corona had just broken out. But I managed to complete all my assignments and was handed my diploma though the car window. In those past years I have learned about creating sustainable and inclusive sites and applications.',
         title: 'cmd'
     },
     {
         img: 'assets/readme-work.png',
-        text: 'This is an example of text that is gonna show up on the README file. Work in progress.',
+        text: 'In the same month of graduation I have landed a job in the world of software. In these years I have been working in a team of programmers. We worked together to design and create accessible, human-centered webapplications in the world of insurance.',
         title: 'job'
     }
 ]

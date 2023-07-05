@@ -11,8 +11,8 @@ export default function Work () {
           <h2>My work</h2>
       </header>
       <div className='work__items'>
-        {projects.map((project) => (
-          <article className='project'>
+        {projects.map((project, index) => (
+          <article className='project' key={index}>
             <div className='project__content'>
               <div className='description'>
                 <div className='description__header'>
@@ -24,9 +24,9 @@ export default function Work () {
                 <p>{project.story}</p>
                 <div className='tools'>
                 {
-                project.tools.map((tool) => {
+                project.tools.map((tool, index) => {
                   return (
-                    <span>{tool}</span>
+                    <span key={index}>{tool}</span>
                     )
                   })
                 }

@@ -20,8 +20,8 @@ export default function History () {
             <span>2023</span>
           </div>
           <Carousel className='carousel__img' indicators={false} style={{backgroundImage: `url(${background})`}}>
-            {history.map((timestamp) => (
-              <Carousel.Item className={timestamp.title}>
+            {history.map((timestamp, index) => (
+              <Carousel.Item className={timestamp.title} key={index}>
                 <p>{timestamp.text}</p>
                 <img className='img' src={timestamp.img} alt={timestamp.title} />
               </Carousel.Item>

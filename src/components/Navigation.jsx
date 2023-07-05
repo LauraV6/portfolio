@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 const Navigation = () => {
 
   const [navOpen, setNavOpen] = useState(false)
-  const closeMenu = () => setNavOpen(false)
+  const navClose = () => setNavOpen(false)
 
   return (
     <nav className='navi'>
@@ -20,10 +20,10 @@ const Navigation = () => {
         </div>
         <div className='navi__group'>
           <ul className={navOpen ? "navi__links active" : "navi__links"}>
-            <Link to='home' onClick={closeMenu} tabindex="1">home</Link>
-            <Link to='work' onClick={closeMenu} tabindex="1">projects</Link>
-            <Link to='about' onClick={closeMenu} tabindex="1">about</Link>
-            <Link to='contact' onClick={closeMenu} tabindex="1">contact</Link>
+            <Link to='home' onClick={navClose} tabIndex="1">home</Link>
+            <Link to='work' onClick={navClose} tabIndex="1">projects</Link>
+            <Link to='about' onClick={navClose} tabIndex="1">about</Link>
+            <Link to='contact' onClick={navClose} tabIndex="1">contact</Link>
           </ul>
         </div>
       </div>

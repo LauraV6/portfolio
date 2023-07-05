@@ -16,6 +16,7 @@
 
     &:has(.navi__links.active) {
         background-color: var(--color-dark);
+        height: 100vh;
     }
 
     .container {

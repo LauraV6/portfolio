@@ -12,9 +12,9 @@ const Intro = () => {
               <p>{story.description}</p>
               <div className='tools'>
               {
-                story.tools.map((tool) => {
+                story.tools.map((tool, index) => {
                   return (
-                    <span>{tool}</span>
+                    <span key={index}>{tool}</span>
                   )
                 })
               }
