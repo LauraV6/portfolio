@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'react-scroll'
+import { Fade } from "react-awesome-reveal";
 import { useGsapDown, useGsapHamb } from '../hooks/gsap';
 
 const Navigation = () => {
@@ -23,35 +24,37 @@ const Navigation = () => {
 
   return (
     <nav className='navi'>
-      <div className='container'>
-        <div className='navi__group'>
-          <li ref={li1}>
-            <Link to='home' className='logo'>L.</Link>
-          </li>
-          <div className='menu-toggle' onClick={() => setNavOpen(!navOpen)}>
-            <div className={navOpen ? "hamb hamb--open" : "hamb"}>
-              <span ref={span1} className={navOpen ? "line line--top spin" : "line line--top"}></span>
-              <span ref={span2} className={navOpen ? "line line--bottom spin" : "line line--bottom"}></span>
+      <Fade>
+        <div className='container'>
+          <div className='navi__group'>
+            <li ref={li1}>
+              <Link to='home' className='logo'>L.</Link>
+            </li>
+            <div className='menu-toggle' onClick={() => setNavOpen(!navOpen)}>
+              <div className={navOpen ? "hamb hamb--open" : "hamb"}>
+                <span ref={span1} className={navOpen ? "line line--top spin" : "line line--top"}></span>
+                <span ref={span2} className={navOpen ? "line line--bottom spin" : "line line--bottom"}></span>
+              </div>
             </div>
           </div>
+          <div className='navi__group'>
+            <ul className={navOpen ? "navi__links active" : "navi__links"}>
+              <li ref={li2}>            
+                <Link to='home' onClick={navClose} tabIndex="1">home</Link>
+              </li>
+              <li ref={li3}>
+                <Link to='work' onClick={navClose} tabIndex="1">projects</Link>
+              </li>
+              <li ref={li4}>
+                <Link to='about' onClick={navClose} tabIndex="1">about</Link>
+              </li>
+              <li ref={li5}>
+                <Link to='contact' onClick={navClose} tabIndex="1">contact</Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className='navi__group'>
-          <ul className={navOpen ? "navi__links active" : "navi__links"}>
-            <li ref={li2}>            
-              <Link to='home' onClick={navClose} tabIndex="1">home</Link>
-            </li>
-            <li ref={li3}>
-              <Link to='work' onClick={navClose} tabIndex="1">projects</Link>
-            </li>
-            <li ref={li4}>
-              <Link to='about' onClick={navClose} tabIndex="1">about</Link>
-            </li>
-            <li ref={li5}>
-              <Link to='contact' onClick={navClose} tabIndex="1">contact</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+      </Fade>
     </nav>
   )
 }
