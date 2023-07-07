@@ -18,8 +18,8 @@ const Navigation = () => {
   const navLinks = [li1, li2, li3, li4, li5]
   const navHamb = [span1, span2]
 
-  useGsapDown(navLinks, .5);
-  useGsapHamb(navHamb, .5);
+  useGsapDown(navLinks, .2);
+  useGsapHamb(navHamb, .2);
 
   return (
     <nav className='navi'>
