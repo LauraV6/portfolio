@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const useGsapDown = (arr, delay = 0) => {
+export const useGsapDown = (arr, delay) => {
   useEffect(() => {
     const el = arr.map((item) => item.current);
 
@@ -23,10 +23,10 @@ export const useGsapDown = (arr, delay = 0) => {
         ease: Power1.easeIn,
       }
     );
-  }, []);
+  }, [arr, delay]);
 };
 
-export const useGsapHamb = (arr, delay = 0) => {
+export const useGsapHamb = (arr, delay) => {
   useEffect(() => {
     const el = arr.map((item) => item.current);
 
@@ -45,10 +45,10 @@ export const useGsapHamb = (arr, delay = 0) => {
         ease: Power1.easeIn,
       }
     );
-  }, []);
+  }, [arr, delay]);
 };
 
-export const useGsapUpward = (arr, delay = 0) => {
+export const useGsapUpward = (arr, delay) => {
   useEffect(() => {
     const el = arr.map((item) => item.current);
 
@@ -67,10 +67,10 @@ export const useGsapUpward = (arr, delay = 0) => {
         ease: Power1.easeIn,
       }
     );
-  }, []);
+  }, [arr, delay]);
 };
 
-export const useGsapHeroButton = (arr, delay = 0) => {
+export const useGsapHeroButton = (arr, delay) => {
   useEffect(() => {
     const el = arr.map((item) => item.current);
 
@@ -89,5 +89,5 @@ export const useGsapHeroButton = (arr, delay = 0) => {
         ease: Power4.easeIn,
       }
     );
-  }, []);
+  }, [arr, delay]);
 };
