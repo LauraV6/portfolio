@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import gsap, { Power1, Power3 } from "gsap";
+import gsap, { Power1, Power4 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -86,7 +86,7 @@ export const useGsapHeroButton = (arr, delay = 0) => {
         opacity: 1,
         duration: 1,
         delay: delay,
-        ease: Power3.easeIn,
+        ease: Power4.easeIn,
       }
     );
   }, []);
