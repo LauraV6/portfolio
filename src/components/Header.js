@@ -21,8 +21,8 @@ const Header = () => {
   return (
       <header id='home' className='container'>
         <Navigation />
-          <Fade>
           <div className='header'>
+          <Fade>
             <div className='header__content'>
                 <h3 ref={heroSubTitleRef} className='subtitle subtitle--odd'>01. Laura Vlasma</h3>
                 <h1 ref={heroTitleRef}>All-round (multimedia) <span className='notable'>Designer</span> and <span className='notable'>Front-end Developer</span></h1>
@@ -32,9 +32,9 @@ const Header = () => {
             <div className='header__image'>
               {[...Array(logoAmount)].map((e, i) => <span className={'logo logo-' + i} key={i}>L.</span>)}       
             </div>
+            </Fade>
           </div>
           <Intro />
-        </Fade>
       </header>
   )
 }
