@@ -1,0 +1,55 @@
+.loader {
+    @include flex-center;
+    width: 100%;
+    height: 100vh;
+
+    &-wrapper {
+        display: grid;
+        gap: 1rem;
+        animation: fadeIn 3s ease-in;
+
+        h1 {
+            font-family: var(--font-logo);
+            font-size: 14em;
+            background-image: linear-gradient(
+              -225deg,
+              var(--color-middle-dark) 64%,
+              var(--color-bright-2) 65%,
+              var(--color-middle-dark) 66%,
+              var(--color-middle-dark) 90%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 260% auto;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 3s infinite;
+        }
+    }
+}
+
+@keyframes textclip {
+    0% {
+        background-position: 0% center;
+    }
+    1% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 180% center;
+    }
+  }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
