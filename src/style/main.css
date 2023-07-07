@@ -764,16 +764,18 @@ h1, h2, h3 {
 }
 .navi__group .menu-toggle .hamb .line--top.spin {
   top: 21px;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  -webkit-transform: rotate(135deg) !important;
+          transform: rotate(135deg) !important;
+  opacity: 1 !important;
 }
 .navi__group .menu-toggle .hamb .line--bottom {
   bottom: 25px;
 }
 .navi__group .menu-toggle .hamb .line--bottom.spin {
   bottom: 21px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(45deg) !important;
+          transform: rotate(45deg) !important;
+  opacity: 1 !important;
 }
 .navi__group .menu-toggle .hamb .line.spin {
   background-color: hsl(0deg, 0%, 100%);

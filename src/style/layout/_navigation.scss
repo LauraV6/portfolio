@@ -92,7 +92,8 @@
 
                         &.spin {
                             top: 21px;
-                            transform: rotate(135deg);
+                            transform: rotate(135deg)!important;
+                            opacity: 1!important;
                         }
                     }
 
@@ -101,7 +102,8 @@
 
                         &.spin {
                             bottom: 21px;
-                            transform: rotate(45deg);
+                            transform: rotate(45deg)!important;
+                            opacity: 1!important;
                         }
                     }
 

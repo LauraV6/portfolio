@@ -11,7 +11,7 @@ export const useGsapDown = (arr, delay) => {
     gsap.fromTo(
       el,
       {
-        y: "-30px",
+        y: "-45px",
         opacity: 0,
       },
       {
@@ -33,7 +33,7 @@ export const useGsapHamb = (arr, delay) => {
     gsap.fromTo(
       el,
       {
-        y: "-30px",
+        y: "-45px",
         opacity: 0,
       },
       {
@@ -55,7 +55,7 @@ export const useGsapUpward = (arr, delay) => {
     gsap.fromTo(
       el,
       {
-        y: "30px",
+        y: "45px",
         opacity: 0,
       },
       {
@@ -77,7 +77,7 @@ export const useGsapHeroButton = (arr, delay) => {
     gsap.fromTo(
       el,
       {
-        x: "-30px",
+        x: "-45px",
         opacity: 0,
       },
       {
@@ -86,7 +86,7 @@ export const useGsapHeroButton = (arr, delay) => {
         opacity: 1,
         duration: 1,
         delay: delay,
-        ease: Power4.easeIn,
+        ease: Power4.easeInOut,
       }
     );
   }, [arr, delay]);
