@@ -7,6 +7,7 @@
         display: grid;
         gap: 1rem;
         animation: fadeIn 3s ease-in;
+        opacity: 0;
 
         h1 {
             font-family: var(--font-logo);
@@ -26,6 +27,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textclip 3s infinite;
+            animation-delay: 1s;
         }
     }
 }
@@ -51,8 +53,10 @@
         opacity: 1;
         transform: scale(1);
     }
-    100% {
+    80% {
         opacity: 1;
-        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
     }
 }

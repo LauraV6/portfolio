@@ -412,6 +412,7 @@
   gap: 1rem;
   -webkit-animation: fadeIn 3s ease-in;
           animation: fadeIn 3s ease-in;
+  opacity: 0;
 }
 .loader-wrapper h1 {
   font-family: var(--font-logo);
@@ -426,6 +427,8 @@
   -webkit-text-fill-color: transparent;
   -webkit-animation: textclip 3s infinite;
           animation: textclip 3s infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes textclip {
@@ -462,10 +465,11 @@
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  100% {
+  80% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes fadeIn {
@@ -479,10 +483,11 @@
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  100% {
+  80% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
   }
 }
 .logo {
