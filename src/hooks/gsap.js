@@ -77,7 +77,7 @@ export const useGsapHeroButton = (arr, delay) => {
     gsap.fromTo(
       el,
       {
-        x: "-45px",
+        x: "-100px",
         opacity: 0,
       },
       {
@@ -86,7 +86,7 @@ export const useGsapHeroButton = (arr, delay) => {
         opacity: 1,
         duration: 1,
         delay: delay,
-        ease: Power4.easeInOut,
+        ease: Power4.easeIn,
       }
     );
   }, [arr, delay]);

@@ -15,7 +15,7 @@ const Header = () => {
   const heroButton = [heroButtonRef]
 
   useGsapUpward(heroContent, 1.5);
-  useGsapHeroButton(heroButton, 1.6);
+  useGsapHeroButton(heroButton, 1.7);
 
   return (
   <header id='home' className='container'>
