@@ -1,5 +1,5 @@
 import React from 'react'
-import background from '../images/readme-bg.jpg'
+import background from '../assets/readme-bg.jpg'
 import Carousel from 'react-bootstrap/Carousel'
 import { history } from '../data';
 
