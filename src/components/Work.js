@@ -13,8 +13,8 @@ export default function Work () {
       </header>
       <div className='work__items'>
         {projects.map((project, index) => (
-          <Fade>
-            <article className='project' key={index}>
+          <Fade key={index}>
+            <article className='project'>
               <div className='project__content'>
                 <div className='description'>
                   <div className='description__header'>
